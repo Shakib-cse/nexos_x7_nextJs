@@ -19,7 +19,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="z-50">
       <section className="container mx-auto px-4 flex justify-between items-center py-4 h-20">
         {/* Logo */}
         <Link href="/" className="flex gap-2 items-center">
