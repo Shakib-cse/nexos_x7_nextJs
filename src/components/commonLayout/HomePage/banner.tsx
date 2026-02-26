@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -26,13 +27,13 @@ const Banner = () => {
           storytelling.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
           <Link href="/#buy-Tickets">
             <Button
               size={"lg"}
               className="w-full rounded-lg sm:w-auto border-2 border-primary py-6"
             >
-              Explore Games
+              Explore Games <ArrowRight />
             </Button>
           </Link>
           <Link href="/#faq">

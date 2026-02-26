@@ -47,7 +47,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Right (Always show) */}
-        <div className="hidden lg:flex items-center space-x-4">
+        <div className="hidden lg:flex items-center gap-3">
           <Link href="/games" className="cursor-pointer">
             <Button className="rounded-lg py-6 bg-transparent border-2 border-primary cursor-pointer">
               Games
