@@ -89,8 +89,8 @@ export default function FeaturedGames() {
               className="bg-muted-foreground border-none rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 p-6"
             >
               {/* Image */}
-              <div className="relative h-70 w-full">
-                <Badge className="absolute top-3 right-3 bg-secondary text-background">
+              <div className="relative h-72 w-full">
+                <Badge className="absolute top-3 right-3 bg-secondary text-background z-20">
                   Action RPG
                 </Badge>
 
@@ -127,9 +127,11 @@ export default function FeaturedGames() {
                     </div>
                   </div>
 
-                  <Button className="bg-primary text-background cursor-pointer">
-                    View Details
-                  </Button>
+                  <Link href={`/game/${game.id}`}>
+                    <Button className="bg-primary text-background cursor-pointer">
+                      View Details
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

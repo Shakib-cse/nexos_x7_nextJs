@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Eye, Star } from "lucide-react";
+import Link from "next/link";
 
 const games = [
   {
@@ -55,7 +56,7 @@ const games = [
     views: "41,256",
     likes: "3,421",
   },
-    {
+  {
     id: 7,
     title: "Arcane Legends",
     description: "Master powerful spells in this magical adventure",
@@ -107,8 +108,8 @@ export default function AllGames() {
               className="bg-muted-foreground border-none rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 p-6"
             >
               {/* Image */}
-              <div className="relative h-70 w-full">
-                <Badge className="absolute top-3 right-3 bg-secondary text-background">
+              <div className="relative h-72 w-full">
+                <Badge className="absolute top-3 right-3 bg-secondary text-background z-20">
                   Action RPG
                 </Badge>
 
@@ -145,9 +146,11 @@ export default function AllGames() {
                     </div>
                   </div>
 
-                  <Button className="bg-primary text-background cursor-pointer">
-                    View Details
-                  </Button>
+                  <Link href={`/game/${game.id}`}>
+                    <Button className="bg-primary text-background cursor-pointer">
+                      View Details
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

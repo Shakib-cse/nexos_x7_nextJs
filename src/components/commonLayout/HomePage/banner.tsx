@@ -21,25 +21,25 @@ const Banner = () => {
           Crafting immersive Gaming Experiences
         </h1>
 
-        <p className="text-background text-lg md:text-xl lg:text-2xl w-full md:w-8/12 mx-auto md:mx-0">
+        <p className="text-background/70 text-lg md:text-xl lg:text-2xl w-full md:w-8/12 mx-auto md:mx-0">
           We are a passionate team of creators building next-generation games
           that push the boundaries of interactive entertainment and
           storytelling.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-          <Link href="/#buy-Tickets">
+          <Link href="/game" className="cursor-pointer">
             <Button
               size={"lg"}
-              className="w-full rounded-lg sm:w-auto border-2 border-primary py-6"
+              className="w-full rounded-lg sm:w-auto border-2 border-primary py-6 cursor-pointer"
             >
               Explore Games <ArrowRight />
             </Button>
           </Link>
-          <Link href="/#faq">
+          <Link href="/team" className="cursor-pointer">
             <Button
               size={"lg"}
-              className="w-full rounded-lg sm:w-auto bg-transparent border-2 border-primary py-6"
+              className="w-full rounded-lg sm:w-auto bg-transparent border-2 border-primary py-6 cursor-pointer"
             >
               View Team
             </Button>
@@ -54,21 +54,14 @@ const Banner = () => {
               alt="Brand Logo"
               width={50}
               height={50}
-              className="rounded-full z-30"
+              className="rounded-full z-20"
             />
             <Image
-              src="/icons/commonLayout/banner/banner_icon.png"
+              src="/icons/commonLayout/banner/banner_icon2.png"
               alt="Brand Logo"
               width={50}
               height={50}
-              className="rounded-full -ml-4 z-20"
-            />
-            <Image
-              src="/icons/commonLayout/banner/banner_icon.png"
-              alt="Brand Logo"
-              width={50}
-              height={50}
-              className="rounded-full -ml-4 z-10"
+              className="rounded-full -ml-4 z-30"
             />
           </div>
 

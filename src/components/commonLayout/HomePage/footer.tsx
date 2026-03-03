@@ -44,7 +44,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start gap-4">
             <SvgIcon />
 
-            <p className="text-sm text-ring leading-relaxed w-full md:w-3/4">
+            <p className="text-sm text-ring leading-relaxed w-full">
               Creating immersive gaming experiences that push the boundaries of
               interactive entertainment.
             </p>
@@ -97,11 +97,11 @@ const Footer = () => {
                   >
                     {/* Purple Circular Icon */}
                     <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary shadow-lg group-hover:scale-105 transition-transform">
-                      <Icon size={20} className="text-white" />
+                      <Icon size={20} className="text-background" />
                     </div>
 
                     {/* Text */}
-                    <span className="text-base text-gray-300 group-hover:text-white transition-colors">
+                    <span className="text-base text-background transition-colors">
                       {name}
                     </span>
                   </Link>
@@ -113,7 +113,7 @@ const Footer = () => {
       </section>
 
       {/* Bottom Info */}
-      <div className="border-t">
+      <div className="border-t border-muted-foreground">
         <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6 py-4 px-4 text-center sm:text-left">
           {/* Left: Copyright */}
           <p className="text-xs sm:text-sm font-semibold text-ring">
@@ -124,14 +124,14 @@ const Footer = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <Link
               href="#"
-              className="text-sm font-semibold hover:text-muted-foreground transition-colors"
+              className="text-sm font-semibold text-background/70 hover:text-background transition-colors"
             >
               Terms & conditions
             </Link>
             <span className="hidden sm:block text-muted-foreground">|</span>
             <Link
               href="#"
-              className="text-sm font-semibold hover:text-muted-foreground transition-colors"
+              className="text-sm font-semibold text-background/70 hover:text-background transition-colors"
             >
               Privacy Policy
             </Link>
