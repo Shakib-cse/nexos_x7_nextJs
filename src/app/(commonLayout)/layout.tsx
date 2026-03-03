@@ -1,4 +1,5 @@
 
+import Footer from "@/components/commonLayout/HomePage/footer";
 import Header from "@/components/commonLayout/HomePage/Header";
 import React from "react";
 
@@ -11,7 +12,7 @@ export default function CommonLayout({
     <>
       <Header />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

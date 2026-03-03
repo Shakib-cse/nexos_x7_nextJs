@@ -16,7 +16,7 @@ const stats: Stat[] = [
 const StatsBar = () => {
   return (
     <div className="p-6 md:p-12 container mx-auto px-4">
-      <div className="bg-primary rounded-lg flex flex-col sm:flex-row gap-8 sm:gap-0 justify-center sm:justify-around items-stretch sm:items-center">
+      <div className="bg-[#32008E] rounded-lg flex flex-col sm:flex-row gap-8 sm:gap-0 justify-center sm:justify-around items-stretch sm:items-center">
         {stats.map((stat, index) => (
           <div
             key={index}

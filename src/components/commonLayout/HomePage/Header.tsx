@@ -15,7 +15,7 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "Game", path: "/game" },
     { name: "Team", path: "/team" },
-    { name: "Resources", path: "/Resources" },
+    { name: "Resources", path: "/resources" },
   ];
 
   return (
@@ -48,7 +48,7 @@ const Header = () => {
 
         {/* Desktop Right (Always show) */}
         <div className="hidden lg:flex items-center gap-3">
-          <Link href="/games" className="cursor-pointer">
+          <Link href="/game" className="cursor-pointer">
             <Button className="rounded-lg py-6 bg-transparent border-2 border-primary cursor-pointer">
               Games
             </Button>
@@ -83,7 +83,7 @@ const Header = () => {
       <div
         className={`lg:hidden fixed inset-0 z-50 transform transition-all duration-500 ease-in-out ${
           isOpen
-            ? "translate-y-0 opacity-100 mt-20"
+            ? "translate-y-0 opacity-100 mt-20 bg-foreground"
             : "-translate-y-full opacity-0"
         }`}
       >

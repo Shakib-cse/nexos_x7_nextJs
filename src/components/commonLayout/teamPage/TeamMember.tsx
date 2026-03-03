@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const teamMembers = [
   {
@@ -26,20 +25,39 @@ const teamMembers = [
     role: "Art Director",
     image: "/icons/commonLayout/team/teams4.jpg",
   },
+  {
+    name: "Imran Ali",
+    role: "Game Artist",
+    image: "/icons/commonLayout/team/teams5.jpg",
+  },
+  {
+    name: "Jake Miller",
+    role: "3D Environment Artist",
+    image: "/icons/commonLayout/team/teams6.jpg",
+  },
+  {
+    name: "Emma Clark",
+    role: "Unreal Engine Developer",
+    image: "/icons/commonLayout/team/teams7.jpg",
+  },
+  {
+    name: "Ryan Brooks",
+    role: "Game Designer",
+    image: "/icons/commonLayout/team/teams8.jpg",
+  },
 ];
 
-export default function TeamSection() {
+export default function TeamMember() {
   return (
-    <section className="w-full py-20 px-4">
+    <section className="w-full py-20 px-4" id="team">
       <div className="container mx-auto px-4 text-center">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold">Meet Our Team</h2>
-        <p className="text-background/70 mt-3">
-          Talented individuals bringing games to life
-        </p>
+        <h2 className="text-2xl md:text-3xl font-bold text-left">
+          Team Members
+        </h2>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-4">
           {teamMembers.map((member, index) => (
             <Card
               key={index}
@@ -76,18 +94,6 @@ export default function TeamSection() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Bottom Button */}
-        <div className="mt-16">
-          <Link href="/team/#team" className="w-full">
-            <Button
-              variant="outline"
-              className="p-8 cursor-pointer font-semibold text-lg border-primary hover:bg-primary hover:text-background bg-transparent text-background transition"
-            >
-              View Full Team →
-            </Button>
-          </Link>
         </div>
       </div>
     </section>
