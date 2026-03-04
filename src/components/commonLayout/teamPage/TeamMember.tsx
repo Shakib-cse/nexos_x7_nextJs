@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const teamMembers = [
   {
@@ -85,12 +86,14 @@ export default function TeamMember() {
                 <hr className="bg-muted-foreground/10 border-t w-full mt-4 mb-4 opacity-10" />
 
                 {/* Button */}
-                <Button
-                  variant="outline"
-                  className="w-full py-6 cursor-pointer font-semibold text-lg border-secondary hover:bg-secondary hover:text-background bg-transparent text-background transition"
-                >
-                  View Profile
-                </Button>
+                <Link href={`/team/${index}`} className="w-full">
+                  <Button
+                    variant="outline"
+                    className="w-full py-6 cursor-pointer font-semibold text-lg border-secondary hover:bg-secondary hover:text-background bg-transparent text-background transition"
+                  >
+                    View Profile
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
