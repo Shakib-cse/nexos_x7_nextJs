@@ -15,7 +15,7 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "Game", path: "/game" },
     { name: "Team", path: "/team" },
-    { name: "Resources", path: "/Resources" },
+    { name: "Resources", path: "/resources" },
   ];
 
   return (
@@ -29,16 +29,18 @@ const Header = () => {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center space-x-8">
           {navLinks.map((link) => {
-            const isActive = pathname === link.path;
+            const isActive =
+              pathname === link.path ||
+              (link.path === "/game" && pathname.startsWith("/game/")) ||
+              (link.path === "/team" && pathname.startsWith("/team/")) ||
+              (link.path === "/resources" && pathname.startsWith("/resources/"));
 
             return (
               <Link
                 key={link.name}
                 href={link.path}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 
-                ${
-                  isActive ? "text-primary font-semibold" : "hover:text-primary"
-                }`}
+        ${isActive ? "text-primary font-semibold" : "hover:text-primary"}`}
               >
                 {link.name}
               </Link>
@@ -47,8 +49,8 @@ const Header = () => {
         </div>
 
         {/* Desktop Right (Always show) */}
-        <div className="hidden lg:flex items-center space-x-4">
-          <Link href="/games" className="cursor-pointer">
+        <div className="hidden lg:flex items-center gap-3">
+          <Link href="/game" className="cursor-pointer">
             <Button className="rounded-lg py-6 bg-transparent border-2 border-primary cursor-pointer">
               Games
             </Button>
@@ -62,7 +64,7 @@ const Header = () => {
 
         {/* Mobile Hamburger */}
         <button
-          className="lg:hidden flex items-center justify-center p-2 rounded-md hover:bg-muted cursor-pointer"
+          className="lg:hidden flex items-center justify-center p-2 rounded-md cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -83,7 +85,7 @@ const Header = () => {
       <div
         className={`lg:hidden fixed inset-0 z-50 transform transition-all duration-500 ease-in-out ${
           isOpen
-            ? "translate-y-0 opacity-100 mt-20"
+            ? "translate-y-0 opacity-100 mt-20 bg-foreground"
             : "-translate-y-full opacity-0"
         }`}
       >
@@ -107,16 +109,16 @@ const Header = () => {
           })}
 
           {/* Mobile Auth Links */}
-          <div className="flex flex-col gap-5 border-t pt-4">
-            <Link
-              href="/auth/sign-in"
-              className="text-lg font-medium hover:text-primary transition"
-              onClick={() => setIsOpen(false)}
-            >
-              Login
+          <div className="flex lg:hidden items-center gap-3">
+            <Link href="/game" className="cursor-pointer">
+              <Button className="rounded-lg py-6 bg-transparent border-2 border-primary cursor-pointer">
+                Games
+              </Button>
             </Link>
-            <Link href="/auth/sign-up" onClick={() => setIsOpen(false)}>
-              <Button className="rounded-2xl w-full">Registration</Button>
+            <Link href="/contact-us" className="cursor-pointer">
+              <Button className="rounded-lg py-6 border-2 border-primary cursor-pointer">
+                Contact Us
+              </Button>
             </Link>
           </div>
         </div>
