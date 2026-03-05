@@ -11,7 +11,10 @@ export default function TeamMemberProfile() {
       <div className="container mx-auto px-4">
         {/* Back Button */}
         <Link href="/team">
-          <Button variant="ghost" className="flex items-center gap-3 p-0 mb-6">
+          <Button
+            variant="ghost"
+            className="flex items-center gap-3 p-0 mb-6 hover:bg-transparent hover:text-background cursor-pointer"
+          >
             <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-primary">
               <Image
                 src="/icons/gameLayout/details/back.png"
@@ -28,7 +31,10 @@ export default function TeamMemberProfile() {
         {/* Profile Header */}
         <div className="flex items-center gap-6">
           <Avatar className="w-24 h-24">
-            <AvatarImage src="/icons/gameLayout/details/imran.png" alt="Imran Ali" />
+            <AvatarImage
+              src="/icons/gameLayout/details/imran.png"
+              alt="Imran Ali"
+            />
             <AvatarFallback>IA</AvatarFallback>
           </Avatar>
 

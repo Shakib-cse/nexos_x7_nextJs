@@ -32,7 +32,8 @@ const Header = () => {
             const isActive =
               pathname === link.path ||
               (link.path === "/game" && pathname.startsWith("/game/")) ||
-              (link.path === "/team" && pathname.startsWith("/team/"));
+              (link.path === "/team" && pathname.startsWith("/team/")) ||
+              (link.path === "/resources" && pathname.startsWith("/resources/"));
 
             return (
               <Link
@@ -108,7 +109,7 @@ const Header = () => {
           })}
 
           {/* Mobile Auth Links */}
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="flex lg:hidden items-center gap-3">
             <Link href="/game" className="cursor-pointer">
               <Button className="rounded-lg py-6 bg-transparent border-2 border-primary cursor-pointer">
                 Games

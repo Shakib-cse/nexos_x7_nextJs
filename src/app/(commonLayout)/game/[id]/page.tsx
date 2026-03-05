@@ -50,12 +50,13 @@ Follow for more updates!`,
   return (
     <div>
       {/* ================= HERO SECTION ================= */}
-      <div className="relative w-full h-90 md:h-200">
+      <div className="relative w-full h-62 sm:h-87 md:h-112 lg:h-137">
         <Image
           src={gameData.banner}
           alt="Game Banner"
           fill
           className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-foreground" />
 
@@ -76,7 +77,7 @@ Follow for more updates!`,
             </Link>
           </div>
 
-          <div className="absolute bottom-8 left-8">
+          <div className="absolute bottom-8">
             <h1 className="text-3xl md:text-6xl font-bold">{gameData.title}</h1>
 
             <div className="flex gap-2 mt-6">
