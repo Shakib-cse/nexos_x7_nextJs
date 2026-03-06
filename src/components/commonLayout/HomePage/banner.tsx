@@ -10,7 +10,7 @@ const Banner = () => {
       className="h-[60vh] md:h-[calc(100vh-80px)] flex items-center relative"
       style={{
         backgroundImage:
-          "url(/icons/commonLayout/banner/banner_background.jpg)",
+          "url(/icons/commonLayout/banner/banner.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
