@@ -12,7 +12,7 @@ export default function UpdateDetails() {
   return (
     <div className="container mx-auto px-4 py-10">
       {/* Back Button */}
-      <Link href="/team">
+      <Link href="/resources">
         <Button
           variant="ghost"
           className="flex items-center gap-3 p-0 mb-6 hover:bg-transparent hover:text-background cursor-pointer"

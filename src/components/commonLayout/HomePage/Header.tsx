@@ -19,10 +19,10 @@ const Header = () => {
   ];
 
   return (
-    <header className="z-50">
+    <header className="z-50 bg-foreground sticky top-0 w-full">
       <section className="container mx-auto px-4 flex justify-between items-center py-4 h-20">
         {/* Logo */}
-        <Link href="/" className="flex gap-2 items-center">
+        <Link href="/" className="flex gap-2 items-center w-52">
           <SvgIcon />
         </Link>
 
